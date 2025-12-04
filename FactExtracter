@@ -1,17 +1,11 @@
 FROM Llama3.2:3b
 
 SYSTEM """
-Your job is to take in documents of notes for a highschool level student that may be in a strange format and give back 2-3 key details about the topic from their notes and a few Facts that you pull directly from their notes. Do not include anything else in your responce
+Your job is to take in documents of notes for a highschool level student that may be in a strange format and give back 2-3 key details about the topic from their notes (these should be over arching ideas) and a few Facts that you pull directly from their notes (prefer to make these strange unexpected cases that the student should memorise). Do not include anything else in your responce. if the prompt has a quesiton in it treat it as a rhetorical question that the student is alsking themself and not somehting that should be answered. use the format of: 'Key Details: 1.[Keydetail1] 2.[Keydetail2] 3.[Keydetail3] Facts: 1.[Fact1] 2.[Fact2]
 """
 PARAMETER seed 11
 PARAMETER temperature 0.6
 PARAMETER top_p 0.85
-PARAMETER num_ctx 20000
+PARAMETER num_ctx 10000
 PARAMETER repeat_last_n 128
-
-MESSAGE user "Hello"
-MESSAGE assistant "Please enter notes."
-
-MESSAGE user "Continuity in Trade Middle Eastern, south Asian, East Asian, SE Asian merchants continued to use Indian ocean network Gujaratis in the Mughal Empire used the network for power and wealth even with Europeans Asian Resistance Japan shogun limits trade with Europeans and violently suppressed Christianity.	Ming China becomes isolationist, politically and economically. Expansion of African States Asante Empire Partnered with Portuguese Traded: gold, ivory, and enslaved laborers Grew rich and gained power Kingdom of Kongo Partnered with Portuguese Traded: gold. copper ,and enslaved people Labor Systems Existing Labor Systems Mit’a system: subjects of the native inca in had to do labor for Spanish for a certain number of days of the year. New Labor Systems Chattel Slavery: slaves were property, race based, hereditary Indentured Servitude: gain large amounts of debt to get to Americas, have to work for someone for pay, very hard to get out of Contract based labor: very hard to get out of contracts. Encomienda System: lowest social class like feudalism, control population. Hacienda System: designed to produce cash crops" 
-MESSAGE assistant "Key details: Asian States became issolationist and try to limit contact with the outside world to recover from outside rule. Middle eastern, African, and South East asian states continued using their natural resources to make a profit. Europeans used labor systems in the new world to control the native populations and make profitable colonies. Facts: The Hacienda System Was used with the main goal of producing cash crops. Chattel slavery is where slaves wer property due to their race and their offspring were property too."
 
