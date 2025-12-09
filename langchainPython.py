@@ -32,10 +32,14 @@ outputParser = StrOutputParser()
 
 #user interface:
 while True:
-    input = input("Path to Word Document (format: Example.docx) use 'exit' to quit: ")
-    try: 
-       docxOutput = read_docx("/workspaces/Langchain-Project/" + input)
+    userInput = input("Path to Word Document (format: Example.docx) use 'exit' to quit: ")
+    if userInput.lower() == 'exit':
+        break
+    try:
+        userInput = f"/workspaces/Langchain-Project/{userInput}"
+        docxOutput = read_docx(userInput)
     except:
-       print("File not found, please try again")
-       continue
+        print("File not found. Please try again.")
+        continue   
+        
     
