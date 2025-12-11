@@ -4,8 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser 
 from docx import Document #from AI
 
-#setting the outside resources to use
-DOCX_PATH = "/workspaces/Langchain-Project/Notes.docx"
+#setting the outside model to use
 model = ChatOllama(model= "Summeriser")
 
 #taking the text out of the Word Document
